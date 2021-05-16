@@ -15,7 +15,7 @@ function App() {
 
   // Data fetch calls in promise change
   useEffect( () => { 
-    Axios(`http://api.giphy.com/v1/gifs/search?q=${query}&limit=24&api_key=tD4vO9cKUlwLSwaSawgGjSeO4yBmmYoK`)
+    Axios(`https://api.giphy.com/v1/gifs/search?q=${query}&limit=24&api_key=tD4vO9cKUlwLSwaSawgGjSeO4yBmmYoK`)
       .then(response => setData(response.data.data))
       .catch(error => console.log('Error fetching and parsing data', error))
       .finally(() => setIsLoading(false))
